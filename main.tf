@@ -44,7 +44,7 @@ module "vpc" {
   private_subnets = var.vpc_private_subnets
   public_subnets  = var.vpc_public_subnets
 
-  assign_generated_ipv6_cidr_block = true
+  # assign_generated_ipv6_cidr_block = true
   enable_nat_gateway               = true
   single_nat_gateway               = true
   enable_dns_hostnames             = true

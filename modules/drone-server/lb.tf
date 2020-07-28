@@ -54,12 +54,12 @@ resource "aws_acm_certificate" "cert" {
   tags = {
     Name = var.fqdn
   }
-  provider = "aws"
+  provider = aws
 }
 
 resource "aws_acm_certificate_validation" "cert_validation" {
   certificate_arn = aws_acm_certificate.cert.arn
-  provider        = "aws"
+  provider        = aws
 
   validation_record_fqdns = [
     aws_route53_record.cert_validation.fqdn,
